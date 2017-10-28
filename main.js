@@ -1,3 +1,11 @@
+
+
+/* _______  _______  _____   _____  ___ ___      ______  _______  ________  _______
+|   |   ||   |   ||     \ |     \|   |   |    |   __ \|   _   ||  |  |  ||     __|
+|       ||   |   ||  --  ||  --  |\     /     |    __/|       ||  |  |  ||__     |
+|__|_|__||_______||_____/ |_____/  |___|      |___|   |___|___||________||_______|
+                                                                                  */
+
 /*** Object Constructors ***/
 function Item(size, color) {
   this.product = "Dog Collar";
@@ -7,16 +15,14 @@ function Item(size, color) {
   this.color = color;
 }
 
-
-
-
+/*Checking that document has loaded before executing any commands     */
 $(document).ready(function() {
-
+    /*Adding the main function on the product page*/
     $("#addItem").click(function(){
         var size = null;
         var color = null;
 
-        //console . log ( 'working' );
+        //console . log ( 'working' ); Used this in earlier versions to check progress
 
         //loop over all of the SIZE radio buttons, check if any of them are selected
         if(document.getElementById('tiny').checked){
@@ -55,7 +61,7 @@ $(document).ready(function() {
         currentCart.push(selection);
         localStorage.setItem("selection", JSON.stringify(currentCart));
 
-    });//click function
+    });//close click function
 
 //Register ARRAY into Cart.html
     //wrapped to turn back into array of objects
@@ -64,6 +70,7 @@ $(document).ready(function() {
 
 
     var cartTable = document.getElementById("cart-table");
+    // I tried and testing with these variables to see if I could direct the objects into the table table on the Cart page
     //var newRow = $('<td></td>');
     //var newRow = "";
     //create a for loop that loops over the array of objects based on the array’s length
@@ -74,8 +81,7 @@ $(document).ready(function() {
         var productPrice = cartItem.price;
         var productSize = cartItem.size;
         var productColor = cartItem.color;
-        /*jshint multistr: true*///So I can use the line continuation character
-
+        /*jshint multistr: true*///So I can use the line continuation character (keep the code neat)
         var newRow = "<tr>\
         <th> " + productName + " </th>\
         <th> " + productImage + " </th>\
@@ -84,64 +90,24 @@ $(document).ready(function() {
         <th> " + productColor + " </th>\
         <th>Remove Item</td>\
         </tr>";
-    }
-
+    }//close for loop
+    //Check through changes and append new row if neccessary
     cartTable.append(newRow);
+    //Similiar code to above but in JQuery, and trying to slot into the correct place
     //$('#cart-table > tbody:first').append(newRow);
 
-    //construct rest of html here including product details and a delete button
-
-    //create an onclick function for the delete button here
-
-    //inside this onclick function, make sure to splice from cart and then update local storage
-    cart.splice(i, 1);// delete items
-    localStorage.setItem("selection", JSON.stringify(cart)); //reupdate local storage with new info
-
-
-});
-
-//Cart is array of objects
-//in each iteration of the loop, create html that contains product details including image, price, quantity, etc.
-
-//grab the table using a javascript or jQuery selector
-
-//in addition to the product details, include a delete button on each new row of the table that deletes the data associated with the product from the array
-
-//if the used deleted the data, make sure to also update the data stored in local storage
-
-//and append the new html you created
-
-
-
-/*    obj = JSON.parse(selection);
-    document.getElementById("cart-table").innerHTML =
-    obj.Item[1].product + " " + obj.Item[1].image + " " + obj.Item[1].price + " " + obj.Item[1].size + " " + obj.Item[1].color;
-
-
-
-    var cartTable = $("#cart-table");
-
-    $("#product-size").text(Item.size);
-    $("#product-color").text(Item.color);
-
-
-    // To grab stuff from the string and feed it into 'CART' page
-    var output = "";
-      for (var i = 0; i <= Item.length; i++) {
-        for ( var in Item[i]) {
-          if (Item[i].hasOwnProperty (key)){
-            output += '<th>' + '""' + '</th>';
-          } //hasOwnPropertyCheck
-        } // for each object
-      } //for each array element
-
-
-
-cart.splice(i, 1);// delete items
-localStorage.setItem(“selection”, JSON.stringify(cart)); //reupdate local storage with new info
-
-
+    //an onclick function for the delete button here (didn't get far enough to try and incorporate this into the page)
+    $("#delete").click(function(){
+         var elems = newRow
+            $(this).closest('tr').remove()
+            })
+        $('#cart-table').append(elems);
+        //Splice from cart and then update local storage so everything has new info
+        cart.splice(i, 1);// delete items
+        localStorage.setItem("selection", JSON.stringify(cart)); //reupdate local storage with new info
+        }//close delete function
 
 });
 
-*/
+
+
