@@ -1,0 +1,438 @@
+body {
+    margin: 0;
+    font-family: 'Nunito Sans', sans-serif;
+    color: teal;
+    background-color: rgb(51,44,43);
+    }
+
+img {
+    width: 100%;
+    height: auto;
+    }
+
+/*********** HEADER ************/
+
+<div style="text-align: center;"><IMG SRC="MUDDY_HEADER-LOGO.jpg" ALT="Muddy Paws LOGO"></div>
+
+/*********** FORMATTING ************/
+
+/******* STYLE GUIDE *******/
+
+header {
+    font-family: 'Nunito Sans', sans-serif;
+    background-color: rgb(255,255,255);
+    color: white;
+    padding: 10px;
+    text-align: center;
+    }
+
+header a {
+    color: black;
+    text-decoration: none;
+    padding: 20px;
+    font-size: 24px;
+    }
+
+h1 {
+    margin: 0;
+    }
+
+h2 {
+    font-family: 'Nunito Sans', sans-serif;
+    color: white;
+    width: 1000px; margin: 20px; padding: 20px;
+    font-size: 24px;
+    text-align: center;
+    }
+
+h3 {  /*********** The smae as h2, only left alighed. I tried to utilize h2 by writing align="center" in the html file, but it didn't work ************/
+    font-family: 'Nunito Sans', sans-serif;
+    color: white;
+    width: 400px; margin: 20px; padding: 20px;
+    font-size: 30px;
+    text-align: left;
+    }
+
+h4 {  /*********** The smae as h2, only left alighed. I tried to utilize h2 by writing align="center" in the html file, but it didn't work ************/
+    font-family: 'Nunito Sans', sans-serif;
+    color: white;
+    width: 1000px; margin: 20px; padding: 20px;
+    font-size: 20px;
+    text-align: left;
+    }
+
+h5 {  /*********** The smae as h3, only the text is Black ************/
+    font-family: 'Nunito Sans', sans-serif;
+    color: black;
+    width: 400px; margin: 20px; padding: 20px;
+    font-size: 30px;
+    text-align: left;
+    }
+
+h6 {
+    font-family: 'Nunito Sans', bold;
+    color: black;
+    width: 260px; margin: 10px; padding: 10px;
+    font-size: 22px;
+    text-align: left;
+    }
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+a:hover {
+    cursor: pointer;
+}
+
+a.active {
+    text-decoration: underline;
+}
+
+p {
+    font-family: 'Nunito Sans', sans-serif;
+    color: grey;
+    width: 900px; margin: 20px; padding: 20px;
+    font-size: 16px;
+    text-align: left;
+    }
+
+/***********NAVIGATION STYLING***********/
+
+nav ul,
+nav ul li {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 20px;
+    letter-spacing: 1px
+}
+
+nav ul {
+    display:flex;
+    align-items: center;
+}
+
+nav ul li {
+    margin-right: 40px;
+}
+
+/* logo */
+nav ul li:first-child img{
+    display: block;
+    width: 100%;
+    height: auto;
+    max-width: 150px;
+}
+
+/* hover states */
+nav a:hover, .back-bar a:hover {
+    text-decoration: underline;
+    opacity: 0.7;
+}
+
+
+
+/*********** Styling sections and divs etc. ************/
+
+.header{
+    background-color: rgb(255,255,255);
+}
+
+.foo{
+    margin-bottom: 6em;
+  }
+
+.foo2{
+    margin-bottom: 2em;
+}
+
+/*********** CSS GRID - INLINE BLOCK ************/
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    font-size: 0;
+    text-align: center;
+    }
+.container2 {
+    width: 80%;
+    margin: 20px; padding: 20px;
+    font-size: 0;
+    text-align: left;
+    }
+.grid-item, .grid-item-large, .grid-item-small {
+    width: 550px;
+    height: 400px;
+    display: inline-block;
+    margin: 4px;
+    font-size: 1rem;
+    vertical-align: top;
+    }
+
+.grid-item-large {
+    height: 1100px;
+    }
+
+.grid-item-small {
+    width: 300px;
+    height: 250px;
+    }
+
+.grid-box {
+    width: 200px;
+    height: 200px;
+    display: inline-block;
+    margin: 4px;
+    font-size: 1rem;
+    vertical-align: top;
+    }
+
+.orderButton {
+    width: 445px;
+    height: 350px;
+    display: inline-block;
+    margin: 20px;
+    padding: 20px;
+    padding-right: 45px;
+    font-size: 1rem;
+    }
+
+
+/*********** CSS GRID - INLINE BLOCK - HOME ************/
+
+.dog {
+    background-color: white;
+    }
+.cat {
+    background-color: white;
+    }
+
+/*********** CSS GRID - INLINE BLOCK - DOG ************/
+
+.accessories {
+    background-color: gold;
+    }
+
+/*********** CSS GRID - INLINE BLOCK - PRODUCT ************/
+
+.productPic {
+    background-color: tomato;
+    height: 660px;
+    }
+
+.thumbnails {
+    display: inline-block;
+    height: 129px;
+    width: 554px;
+    margin: 30px 10px;
+    border: grey 1px solid;
+}
+
+.grid-item-button {
+    width: 194px;
+    height: 54px;
+    border-radius:9px;
+    border:3px solid #dcdcdc;
+    display: inline-block;
+    margin: 10px;
+    cursor:pointer;
+    }
+
+.grid-item-button:hover {
+  background: white;
+}
+
+.add{
+    width: 100px;
+    height: 30px;
+
+}
+
+.grid-item-button.active, .grid-item-button:active {
+    background: blue;
+    text-decoration: none;
+}
+
+.price-sales {
+    font-family: 'Nunito Sans', bold;
+    color: white;
+    width: 100px;
+    margin: 20px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding: 20px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    font-size: 40px;
+    text-align: left;
+    }
+
+.price-description {
+    font-family: 'Nunito Sans', bold;
+    color: grey;
+    margin: 20px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding: 20px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    font-size: 16px;
+    text-align: left;
+    }
+
+.price-more {
+    font-family: 'Nunito Sans', bold;
+    color: black;
+    margin: 20px;
+    margin-top: 0px;
+    margin-bottom: 1px;
+    padding: 20px;
+    padding-top: 0px;
+    padding-bottom: 10px;
+    font-size: 16px;
+    text-align: left;
+    }
+
+
+.floating {
+    background-color: rgb(81,81,81);
+    }
+.tags {
+    background-color: gold;
+    }
+.check {
+    width: 120px;
+    height: 54px;
+    background-color: gold;
+}
+
+
+/*********** PICTURE DETAIL PANEL ************/
+
+
+.product-images {
+    width: 500px;
+    position:relative;
+    display: inline-block;
+    float:left;
+    padding:10px;
+  }
+
+.display-image {
+    height: 419px;
+}
+
+/*********** SHOPPING CART PAGE ************/
+
+.cart{
+  text-align:right
+}
+
+.shopping-cart {
+  width: 800px;
+  height: 423px;
+  margin: 80px auto;
+  background: #FFFFFF;
+  box-shadow: 1px 2px 3px 0px rgba(0,0,0,0.10);
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  height: 60px;
+  border-bottom: 1px solid #E1E8EE;
+  padding: 20px 30px;
+  color: #5E6977;
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.item {
+  padding: 20px 30px;
+  height: 120px;
+  display: flex;
+}
+
+
+.image {
+  width:220px;
+  height: 100px;
+  margin: 10px;
+  margin-right: 50px;
+  object-fit: scale-down;
+}
+
+.description {
+  padding-top: 10px;
+  margin-right: 60px;
+  width: 200px;
+}
+
+.description span {
+  display: block;
+  font-size: 18px;
+  color: #43484D;
+  font-weight: 400;
+}
+
+.description span:first-child {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+.description span:last-child {
+  font-weight: 300;
+  margin-top: 8px;
+  color: #86939E;
+}
+
+.quantity {
+  width: 120px;
+  padding-top: 20px;
+  margin-right: 30px;
+}
+.quantity input {
+  border: none;
+  text-align: center;
+  width: 32px;
+  font-size: 16px;
+  color: #43484D;
+  font-weight: 300;
+}
+
+button:focus,
+input:focus {
+  outline:0;
+}
+
+.total-price {
+  width: 83px;
+  padding-top: 27px;
+  text-align: center;
+  font-size: 20px;
+  color: #43484D;
+  font-weight: 300;
+}
+
+.buttons {
+  position: relative;
+  padding-top: 30px;
+  margin-right: 60px;
+}
+
+.delete-btn {
+  width: 18px;
+  height: 17px;
+  background: "delete_button.jpg"
+}
+
+.check-out {
+    width: 70px;
+    height: 30px;
+    border-radius:9px;
+    border:3px solid #dcdcdc;
+    margin: 10px;
+    cursor:pointer;
+    }

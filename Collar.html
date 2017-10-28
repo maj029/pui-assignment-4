@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>MuDDy PaWs</title>
+        <!-- styles -->
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <!-- fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Nunito+Sans" rel="stylesheet">
+        <!-- For Responsive images  -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- JQUERY FILE !-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <!-- javascript -->
+        <script src="main.js" type="text/javascript"></script>
+    </head>
+
+    <body>
+        <header align="center">
+            <section class="header">
+                <nav>
+                    <a href = "index.html" >
+                        <h1><img src="img/MUDDY_HEADER-LOGO.jpg" alt="Muddy Paws Homepage" style="width:400px;height:123px;"></h1>
+                    </a>
+                    <a href = "index.html" >HOME</a>
+                    <a href = "Dog.html" > DOG </a>
+                    <a href = "Cat.html" > CAT </a>
+                </nav>
+                <a href="cart.html"><align = right>Cart</a>
+            </section>
+        </header>
+            <div style="height: 15px; width: 100%; background-color: gold; color: white;">
+            </div>
+
+    <!-- MAIN BODY  -->
+
+        <div class="foo"></div>
+
+        <section class="container">      <!-- Using In-Line block to keep the columns, used inline block again for the size selections  -->
+            <div class="grid-item productPic">
+                <img src="img/collar_3.jpg" alt="Muddy PAws Teal Dog Collar" style="width:550px;height:660px;border:20px gold">
+                <div class="product-images" align="center" >
+                <ul>
+                    <li><img src="img/collar_1.jpg" alt="Muddy PAws Teal Dog Collar" style="width:120px;border:20px gold"></img></li>
+                    <li><img src="img/collar_2.jpg" alt="Muddy PAws Teal Dog Collar" style="width:120px;border:20px gold"></img></li>
+                    <li><img src="img/collar_4.jpg" alt="Muddy PAws Teal Dog Collar" style="width:120px;border:20px gold"></img></li>
+                </ul>
+                </div>
+            </div>
+
+            <div class="grid-item-large floating">
+                <h3>DOG HARNESS</h3>
+                <div class="price-sales">$24.99</div>
+                <div class="price-description">Save up to 15% with in-store pick-up</div>
+                <div class="price-more">LEARN MORE</div>
+                <div class="price-description">Free shipping on orders over $49</div>
+                <div class="price-more">LEARN MORE</div>
+                <a href = "Dog.html" ><p>Search our range of Dog items</p></a>
+
+                <!-- PRODUCT FORM INPUTS !-->
+
+                <form id="item" product="Dog Collar" price="24.99">
+                    <h4>SIZE</h4>
+                    <div class="container" id="size">
+                        <div class="grid-item-button tags">
+                            <h6><input type="radio" name="size" id="tiny">Tiny</h6>
+                        </div>
+                        <div class="grid-item-button tags">
+                            <h6><input type="radio" name="size" id="small">Small</h6>
+                        </div>
+                        <div class="grid-item-button tags">
+                            <h6><input type="radio" name="size" id="medium">Medium</h6>
+                        </div>
+                        <div class="grid-item-button tags">
+                            <h6><input type="radio" name="size" id="large">Large</h6>
+                        </div>
+                    </div>
+
+                    <h4>COLOR</h4>
+                    <div  class="container" id="color">
+                        <div class="grid-item-button tags">
+                            <h6><input type="radio" name="color" id="strawberry">Strawberry</h6>
+                        </div>
+                        <div class="grid-item-button tags">
+                            <h6><input type="radio" name="color" id="blackberry">Blackberry</h6>
+                        </div>
+                        <div class="grid-item-button tags">
+                            <h6><input type="radio" name="color" id="crazyberry">Crazyberry</h6>
+                        </div>
+                        <div class="grid-item-button tags">
+                            <h6><input type="radio" name="color" id="camouflage">Camouflage</h6>
+                        </div>
+                        <div class="grid-item-button tags">
+                            <h6><input type="radio" name="color" id="nightmoon">Night Moon</h6>
+                        </div>
+                        <div class="grid-item-button tags">
+                            <h6><input type="radio" name="color" id="fireorange">Fire Orange</h6>
+                        </div>
+                    </div>
+                    <div class="foo2"></div>
+                    <button id="addItem" class="grid-item-button add" >Add Item</button>
+                    <p id="button-action-text"></p>
+                </form>
+            </div>
+
+        </section>
+
+
+        <div class="foo"></div>
+
+        <footer>
+            <div style="height: 15px; width: 100%; background-color: gold; color: white;">
+                <br>
+            <p>Design by Mark Byrne for PUI Assignment 3<br>Contact information: <a href="mailto:mabyrne@andrew.cmu.edu">mabyrne</a>.</p>
+        </footer>
+
+    </body>
+
+</html>
